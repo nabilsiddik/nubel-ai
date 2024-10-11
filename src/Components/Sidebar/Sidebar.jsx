@@ -14,7 +14,7 @@ const Sidebar = () => {
             </div>
             <div className="new_chat">
                 <button className='btn w-full bg-blue-600 text-white font-bold py-2 rounded-sm flex items-center gap-1 justify-center'>
-                    <span className='text-lg'><i class="fa-solid fa-plus"></i></span>
+                    <span className='text-lg'><i className="fa-solid fa-plus"></i></span>
                     <span>New Chat</span>
                 </button>
             </div>
@@ -22,13 +22,6 @@ const Sidebar = () => {
             <div className="chat_histories mt-5">
                 <h3 className='font-bold text-xl mb-3'>Chat History</h3>
                 <div className="chat_history max-h-[30vh] overflow-auto">
-                    <ChatHistory/>
-                    <ChatHistory/>
-                    <ChatHistory/>
-                    <ChatHistory/>
-                    <ChatHistory/>
-                    <ChatHistory/>
-                    <ChatHistory/>
                     <ChatHistory/>
                 </div>
             </div>
@@ -38,21 +31,21 @@ const Sidebar = () => {
             <ul className='flex flex-col gap-2'>
                 <li className='flex items-center gap-3 px-3 md:px-5 mb-3 text-lg font-bold mr-3'>
                     <span>
-                        <i class="fa-solid fa-house"></i>
+                        <i className="fa-solid fa-house"></i>
                     </span>
                     <span>Home</span>
                 </li>
 
                 <li className='flex items-center gap-3 px-3 md:px-5 mb-3 text-lg font-bold mr-3'>
                     <span>
-                    <i class="fa-solid fa-rocket"></i>
+                    <i className="fa-solid fa-rocket"></i>
                     </span>
                     <span>Upgrade PRO</span>
                 </li>
 
                 <li className='flex items-center gap-3 px-3 md:px-5 mb-3 text-lg font-bold mr-3'>
                     <span>
-                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <i className="fa-solid fa-right-from-bracket"></i>
                     </span>
                     <span>Log Out</span>
                 </li>

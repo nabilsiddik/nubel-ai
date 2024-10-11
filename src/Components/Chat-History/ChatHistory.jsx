@@ -6,7 +6,7 @@ const ChatHistory = () => {
       <ul className='flex flex-col gap-2'>
         <li className='flex items-center gap-3 border border-white px-3 md:px-5 py-3 mb-2 mr-3'>
             <span>
-                <i class="fa-regular fa-message"></i>
+                <i className="fa-regular fa-message"></i>
             </span>
             <span>CSS psudo elements</span>
         </li>
