@@ -5,21 +5,21 @@ import { nubelAiContext } from '../../Context/NubelAi-Context/NubelAiContext';
 
 const MainContent = () => {
 
-  const {QnA, isLoading} = useContext(nubelAiContext)
+  const {QnA, isLoading, isMobileMenuActive, toggleMobileMenu} = useContext(nubelAiContext)
 
 
 
   return (
-    <div id='main_content' className='w-[60%] md:w-[70%] py-5  bg-[#212121] h-[100vh] overflow-hidden flex flex-col justify-between px-5 md:px-10 lg:px-20'>
+    <div id='main_content' className={`${isMobileMenuActive ? 'w-[100%] md:w-[70%]' : 'w-[100%] md:w-[100%]'}  py-5  bg-[#212121] h-[100vh] overflow-hidden flex flex-col justify-between px-5 md:px-10 lg:px-20`}>
+
+      <div className={`${isMobileMenuActive ? 'hidden' : 'block mobile_menu_icon'} mb-5`}>
+          <span onClick={toggleMobileMenu} className='font-bold text-xl cursor-pointer'><i class="fa-solid fa-bars"></i></span>
+      </div>
       
       <div className="display_content text-lg max-h-[100%] overflow-auto mb-10">
-
           {isLoading ? (
-            <div className='flex items-center jsutify-center h-[100%]'>
+            <div className='flex items-center jsutify-center h-[100%] w-full'>
               <div>
-                <span class="loading loading-dots loading-xs"></span>
-                <span class="loading loading-dots loading-sm"></span>
-                <span class="loading loading-dots loading-md"></span>
                 <span class="loading loading-dots loading-lg"></span>
               </div>
             </div>

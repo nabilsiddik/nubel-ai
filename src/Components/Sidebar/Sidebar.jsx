@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../../assets/artificial-intelligence.png'
 import ChatHistory from '../Chat-History/ChatHistory'
+import { nubelAiContext } from '../../Context/NubelAi-Context/NubelAiContext'
 
 const Sidebar = () => {
+
+    const {isMobileMenuActive, toggleMobileMenu} = useContext(nubelAiContext)
+
   return (
-    <div id='sidebar' className='w-[40%] md:w-[30%] py-5 px-5 bg-[#171717] h-[100vh] flex flex-col justify-between'>
+    <div id='sidebar' className={`${isMobileMenuActive ? 'block absolute sm:static w-[70%]' : 'hidden'} w-[50%] md:w-[30%] py-5 px-5 bg-[#171717] h-[100vh] flex flex-col justify-between`}>
         <div className="sidebar_top">
-            <div className="logo flex items-center gap-2 mb-5">
-                <span>
-                    <img className='max-w-[35px]' src={logo} alt="" />   
-                </span>
-                <span className='font-bold text-xl'>Nubel Ai</span>
+            <div className="logo_and_menu_icon flex items-center justify-between mb-5">
+                <div className="logo flex items-center gap-2">
+                    <span>
+                        <img className='max-w-[35px]' src={logo} alt="" />   
+                    </span>
+                    <span className='font-bold text-xl'>Nubel Ai</span>
+                </div>
+                <div className='mobile_menu_icon'>
+                    <span onClick={toggleMobileMenu} className='font-bold text-xl cursor-pointer'><i class="fa-solid fa-bars"></i></span>
+                </div>
             </div>
             <div className="new_chat">
                 <button className='btn w-full bg-blue-600 text-white font-bold py-2 rounded-sm flex items-center gap-1 justify-center'>
